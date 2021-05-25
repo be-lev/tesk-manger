@@ -1,0 +1,152 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: url(/assets/tile.jpg);
+    opacity: 0.8;
+}
+
+/* HEADER SECTION */
+#header {
+    text-align: center;
+    font-family: CoolFont;
+    font-size: 400%;
+    margin: 2%;
+}
+@font-face {
+    src: url("/assets/smashed/Smashed.ttf");
+    font-family: CoolFont;
+}
+/* TASK SECTION */
+
+#mainFormContainer {
+    background: url(/assets/formbg.jpg);
+    background-size: 100%;
+    height: auto;
+    border: 1px solid black;
+    margin: 2%;
+    margin-left: 10%;
+    width: 70%;
+    max-width: 1000px;
+    align-items: center;
+}
+
+#formInput {
+    margin: auto;
+    padding-left: 15%;
+    width: 100%;
+    font-weight: bold;
+    font-size: 15px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#taskDescription {
+    background-color: transparent;
+    width: 70%;
+    height: 100px;
+    border: none;
+}
+
+.input {
+    background-color: transparent;
+    padding-left: 10px;
+    width: 200px;
+    margin-left: 30px;
+}
+
+.formButton {
+    cursor: pointer;
+    border: 0px;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: #262626;
+    color: #ffffff;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.formButton:hover {
+    opacity: 0.9;
+}
+
+/* NOTE SECTION */
+
+#taskContainer {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 20px;
+    margin-bottom: 10%;
+}
+
+.note {
+    background-image: url(/assets/notebg.png);
+    background-repeat: no-repeat;
+    height: 300px;
+    display: inline-block;
+    margin: 2%;
+}
+
+.description {
+    width: 180px;
+    height: 180px;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 15px;
+    word-wrap: break-word;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.timeAndDate {
+    height: 20px;
+    padding-bottom: 25px;
+    padding-left: 10px;
+    margin: 0px;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+/* SCROLL BAR SECTION */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #dfe214c4;
+}
+
+/* FADE IN ANIMATION  */
+@keyframes CoolAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.note:last-of-type {
+    animation: CoolAnimation 2s linear alternate;
+}
+
+/* DELETE BUTTON */
+
+.deleteButton {
+    position: relative;
+    float: right;
+    border: none;
+    background: none;
+    outline: none;
+    color: black;
+    margin-top: 10px;
+    display: none;
+    transform: translateX(-80%);
+}
+
+.note:hover button {
+    display: block; /* On :hover of div show button */
+}
